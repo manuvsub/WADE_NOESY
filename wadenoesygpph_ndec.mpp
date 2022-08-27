@@ -1,0 +1,111 @@
+
+;$CLASS=HighRes
+;$DIM=2D
+;$TYPE=
+;$SUBTYPE=
+;$COMMENT=
+
+prosol relations=<triple>
+
+#include <Avance.incl>
+#include <Grad.incl>
+
+"p39 =34.595*40"    
+"spoff39=0.0"     
+"spw39=plw1*pow(p1/40, 2)"
+;"spw39=plw39"      
+;spnam39  wadepix_NP_2_rf0.00_34.595p1_bw0.82p1.mvs; (p39:sp39 ph1)
+
+"p37 =25.7*40"     
+"spoff37=0.0"     
+"spw37=plw1*pow(p1/40, 2)" 
+;spnam37  wadepi2x_rf0.00_25.700p1_bw1.85p1.mrf; (p37:sp37 ph1)
+
+ 
+
+
+"d12=20u"
+
+
+"in0=inf1"
+
+"d0=in0/2-p1*4/3.1416"
+
+
+1 ze
+2 d1 do:f3
+3 d12 pl1:f1 pl16:f3
+
+  10u cpds3:f3
+  p1 ph1
+  d0
+  p1 ph2
+  6u do:f3
+
+  d8  pl0:f1
+(p37:sp37 ph3);  p1 ph3
+  d12 pl18:f1
+  50u UNBLKGRAD
+  p16:gp1
+  d16 pl0:f1
+(p39:sp39 ph1)
+
+  46u
+  p16:gp1
+  d16 pl16:f3
+  4u BLKGRAD
+  go=2 ph31 cpd3:f3
+  d1 do:f3 mc #0 to 2 F1PH(ip1, id0)
+exit
+
+
+ph1=0 2 
+ph2=0 0 0 0 0 0 0 0 2 2 2 2 2 2 2 2
+ph3=0 0 2 2 3 3 1 1
+ph4=0
+ph5=2
+ph31=0 2 2 0 1 3 3 1 2 0 0 2 3 1 1 3
+
+;pl1 : f1 channel - power level for pulse (default)
+;pl18: f1 channel - power level for 3-9-19-pulse (watergate)
+;p0 : f1 channel -  90 degree pulse at pl18
+;                      use for fine adjustment
+;p1 : f1 channel -  90 degree high power pulse
+;p2 : f1 channel - 180 degree high power pulse
+;p16: homospoil/gradient pulse
+;p27: f1 channel -  90 degree pulse at pl18
+;d0 : incremented delay (2D)
+;d1 : relaxation delay; 1-5 * T1
+;d8 : mixing time
+;d12: delay for power switching                      [20 usec]
+;d16: delay for homospoil/gradient recovery
+;d19: delay for binomial water suppression
+;     d19 = (1/(2*d)), d = distance of next null (in Hz)
+;inf1: 1/SW = 2 * DW
+;in0: 1/(1 * SW) = 2 * DW
+;nd0: 1
+;NS: 8 * n
+;DS: 16
+;td1: number of experiments
+;FnMODE: States-TPPI, TPPI, States or QSEQ
+;cpd3: decoupling according to sequence defined by cpdprg3
+;pcpd3: f3 channel - 90 degree pulse for decoupling sequence
+
+;use gradient ratio:	gp 1
+;			  20
+
+;for z-only gradients:
+;gpz1: 20%
+
+;use gradient files:   
+;gpnam1: SINE.100
+
+
+;Processing
+
+;PHC0(F1): 90
+;PHC1(F1): -180
+;FCOR(F1): 1
+
+
+
