@@ -9,8 +9,8 @@ The script and algorithms are patented @ https://patentcenter.uspto.gov/#!/appli
 "wadenoesygpph_ndec.mpp" is the WADE-NOESY pulse sequence in Bruker format. The shape files are listed below. 
 |Short Name | Full Shape Name| Operation Type  |  Pulse Length factor | Pulse Length |   Amplitude  |    reference  JBNMR (2022)|
 | ----------| ------------   | -------------   | -------------        | ------------ | ----------- | ---------  
-|W1F90|wadepi2x_rf0.00_25.700p1_bw1.85B1.mrf|WADE-π/2|25.7|25.7*40us=1028 us|6.33kHz|  Figure 5|
-|WR4|wadepix_NP_2_rf0.00_34.595p1_bw0.82B1.mrf|WADE-π/2|34.595|34.595*40us= 1383.8 us|6.33kHz| Figure 5| 
+|W1F90|wadepi2x_rf0.00_25.700p1_bw1.85B1.mrf|WADE-π/2|25.7|25.7*40us=1028 us|6.25kHz|  Figure 5|
+|WR4|wadepix_NP_2_rf0.00_34.595p1_bw0.82B1.mrf|WADE-π/2|34.595|34.595*40us= 1383.8 us|6.25kHz| Figure 5| 
  
  
  
