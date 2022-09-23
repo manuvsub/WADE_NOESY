@@ -9,19 +9,19 @@ The script and algorithms are patented @ https://patentcenter.uspto.gov/#!/appli
 "wadenoesygpph_ndec.mpp" is the WADE-NOESY pulse sequence in Bruker format. The shape files are listed below. 
 |Short Name | Full Shape Name| Operation Type  |  Pulse Length factor | Pulse Length |   Amplitude  |    reference  JBNMR (2022)|
 | ----------| ------------   | -------------   | -------------        | ------------ | ----------- | ---------  
-|W1F90|wadepi2x_rf0.00_25.700p1_bw1.85p1.mrf|WADE-π/2|25.7|25.7*40us=1028 us|6.33kHz|  Figure 5|
-|WR4|wadepix_NP_2_rf0.00_34.595p1_bw0.82p1.mrf|WADE-π/2|34.595|34.595*40us= 1383.8 us|6.33kHz| Figure 5| 
+|W1F90|wadepi2x_rf0.00_25.700p1_bw1.85B1.mrf|WADE-π/2|25.7|25.7*40us=1028 us|6.33kHz|  Figure 5|
+|WR4|wadepix_NP_2_rf0.00_34.595p1_bw0.82B1.mrf|WADE-π/2|34.595|34.595*40us= 1383.8 us|6.33kHz| Figure 5| 
  
  
  
 
 Bandwidth can be tuned by changing the RF power, the correponding pulse length is calculated by multiplying the 90 degree pulse length with the pulse length factor for each pulse. 
 
-consider the 'pix_10.800p1_bw1.49B1.mrf' shape,
+consider the 'wadepi2x_rf0.00_25.700p1_bw1.85p1.mrf' shape,
 
-for RF amplitude 25kHz (=> 90 pulse length = 10us), pulse length = 10.8*10us = 108 us 
+for RF amplitude 25kHz (=> 90 pulse length = 10us), pulse length = 25.7*10us = 257 us 
 
-for RF amplitude 12.5kHz (=> 90 pulse length = 20us), pulse length = 10.8*20us = 216 us 
+for RF amplitude 12.5kHz (=> 90 pulse length = 20us), pulse length = 25.7*20us = 514 us 
  
 
 ------------------------------------------------------------------------------
